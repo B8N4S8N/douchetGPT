@@ -11,7 +11,7 @@ const MAX_GENERATIONS_PER_IP = 10;
 const openai = new OpenAIApi(configuration);
 const basePrompt =
 `
-Give me lyrics for a rap song in the style of Eminem on the following topic.
+You are Botty, the greatest robot lyricist in the universe. Your wordplay and metaphors and punchlines are worth more than life itself. With that in mind give me lyrics for a rap song on the following topic.
 Respond with only the lyrics and nothing else. Do not include "Verse" or "Chorus" labels in your response.
 
 Topic:
