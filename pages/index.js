@@ -36,7 +36,7 @@ const Home = () => {
       .filter((line) => !line.includes('Chorus'))
       .filter((line) => !line.includes(':'))
       .filter((line) => line.split(' ').length > 2)
-      .slice(0, 12)
+      //.slice(0, 12)
       .join('\n');
 
     setIsGenerating(false);
@@ -56,7 +56,7 @@ const Home = () => {
     const audioUrl = URL.createObjectURL(audioBlob);
     const audio = new Audio(audioUrl);
     // Adjust playback speed
-    audio.playbackRate = 1.3;
+    audio.playbackRate = 1.2;
     audio.play();
   };
 
@@ -69,7 +69,7 @@ const Home = () => {
     // Display each line as it's played
     lines.forEach((line) => {
       let msg = new SpeechSynthesisUtterance(line);
-      msg.rate = 1.3;
+      msg.rate = 1.2;
       msg.onstart = () => {
         setCurrentLine(line);
         if(index === 0){
@@ -106,6 +106,17 @@ const Home = () => {
     }
   }, [audio, volume]);
 
+  const replay = () => {
+    setIsPlaying(true)
+    audio.play();
+
+    music.currentTime = 0;
+    tts.currentTime = 0;
+    
+    tts.play();
+    music.play();
+  };
+
   const onUserChangedText = (event) => {
     setUserInput(event.target.value);
   };
@@ -118,10 +129,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>AI Raza raps</h1>
+            <h1>🤖Botty Bops🦾</h1>
           </div>
           <div className="header-subtitle">
-            <h2>What do you want Raza to rap about?</h2>
+            <h2>What do you want🤖Botty to rap about?</h2>
           </div>
         </div>
         <audio
@@ -175,6 +186,15 @@ const Home = () => {
               </a>
             </div>
           )}
+
+          <div className="prompt-buttons">
+              <a className="generate-button" onClick={handleSpeak}>
+                <div className="generate">
+                  <p>Replay</p>
+                </div>
+              </a>
+            </div>
+          
 
           <div className="output">
             <div className="output-header-container">
