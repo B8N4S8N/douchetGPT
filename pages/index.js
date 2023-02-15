@@ -170,7 +170,7 @@ const Home = () => {
                 {isGenerating ? (
                   <span className="loader"></span>
                 ) : (
-                  <p>RAP</p>
+                  <p>Boppit</p>
                 )}
               </div>
             </a>
@@ -187,13 +187,7 @@ const Home = () => {
             </div>
           )}
 
-          <div className="prompt-buttons">
-              <a className="generate-button" onClick={handleSpeak}>
-                <div className="generate">
-                  <p>Replay</p>
-                </div>
-              </a>
-            </div>
+       
           
 
           <div className="output">
@@ -210,13 +204,13 @@ const Home = () => {
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://www.buymeacoffee.com/guttermademedia"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <p>Help me build this project</p>
           </div>
         </a>
       </div>
