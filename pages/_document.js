@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="AI Rapper" key="title"/>
+        <meta property="og:title" content="Botty Bops" key="title"/>
         <meta property="og:description" content="Can't rap? Get AI to do it for you!" key="description"/>
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
