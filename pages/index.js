@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+import buildspaceLogo from '../assets/Group 71.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -56,7 +56,7 @@ const Home = () => {
     const audioUrl = URL.createObjectURL(audioBlob);
     const audio = new Audio(audioUrl);
     // Adjust playback speed
-    audio.playbackRate = 1.2;
+    audio.playbackRate = 1.3;
     audio.play();
   };
 
@@ -69,7 +69,7 @@ const Home = () => {
     // Display each line as it's played
     lines.forEach((line) => {
       let msg = new SpeechSynthesisUtterance(line);
-      msg.rate = 1.2;
+      msg.rate = 1.3;
       msg.onstart = () => {
         setCurrentLine(line);
         if(index === 0){
