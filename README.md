@@ -5,9 +5,7 @@ This was created with the [build an AI rapper w/ GPT-3](https://buildspace.so/bu
 To make this yours, let's first deal with what is called "the base prompt" To do this navigate to Pages, then API, then generate.js. All customizable attributes have comments added to them giving instructions on how to change them to your hearts desire.
 
 Second let's head to pages, then index.js. In here you will find the neccessary UI components to customize this to make it your own. Just scroll down past where it says `return( `  From here you find things like 
-` <Head>
-        <title>GPT-Rapper | buildspace </title>
- </Head>`
+` <Head> <title> GPT-Rapper | buildspace </title> </Head>`
  go ahead and change what is in between the title tags. This is what shows up in the browser bar when users are using your site. Cool huh?
  
  Next  let's change what is inside the H1 tags`<div className="header-title">
